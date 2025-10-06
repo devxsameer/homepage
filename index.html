@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage.</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      /* Loader styling */
+      .loader-wrapper {
+        position: fixed;
+        max-width: initial;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        z-index: 9999;
+        overflow: hidden;
+      }
+
+      /* the loader animation (the small 3-bar one) */
+      .loader {
+        transition: opacity 1s ease;
+        width: 45px;
+        aspect-ratio: 0.75;
+        --c: no-repeat linear-gradient(#121212 0 0);
+        background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+        background-size: 20% 50%;
+        animation: l6 1s infinite linear;
+        z-index: 2;
+      }
+      @keyframes l6 {
+        20% {
+          background-position: 0% 0%, 50% 50%, 100% 50%;
+        }
+        40% {
+          background-position: 0% 100%, 50% 0%, 100% 50%;
+        }
+        60% {
+          background-position: 0% 50%, 50% 100%, 100% 0%;
+        }
+        80% {
+          background-position: 0% 50%, 50% 50%, 100% 100%;
+        }
+      }
+
+      /* Ripple element (pseudo-element) */
+      .loader-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -25%; /* start from top-left corner */
+        left: -25%;
+        width: 200px;
+        height: 200px;
+        background: #ff4757;
+        border-radius: 50%;
+        transform: scale(30); /* expand ripple to cover screen */
+        transition: transform 1s ease-out;
+        z-index: 1;
+      }
+
+      /* When hidden, trigger ripple */
+      .loader-wrapper.hidden::before {
+        transform: scale(0);
+      }
+      .loader-wrapper.hidden .loader {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <header class="header">
+      <h1 class="logo">dev<span>X</span>sameer</h1>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <a href="#hero" class="active">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+    <main class="hero" id="hero">
+      <div class="hero-content">
+        <h2 class="hero-heading">Hi, I'm <span>Sameer Ali</span></h2>
+        <span class="hero-sub-heading">Full Stack Developer</span>
+        <p class="hero-para">
+          Passionate about building responsive, user-friendly websites and web
+          applications. I turn ideas into clean, functional designs while
+          exploring modern web technologies.
+        </p>
+        <a href="#contact">
+          <button class="btn" type="button">Contact Me</button>
+        </a>
+      </div>
+      <picture class="hero-picture">
+        <img
+          width="400px"
+          src="./assets/hero.jpeg"
+          alt="anime character"
+          srcset=""
+        />
+      </picture>
+    </main>
+    <section class="projects" id="projects">
+      <div class="section-content">
+        <h2 class="section-heading"><span>P</span>rojects</h2>
+        <p class="section-para">
+          Here's a showcase of the projects I've built while learning and
+          exploring web development. Each one reflects my journey of turning
+          ideas into interactive, responsive, and visually engaging web
+          experiences — from simple components to complete websites.
+        </p>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="section-content">
+        <h2 class="section-heading">Contact <span>M</span>e</h2>
+        <p class="section-para">
+          Have a project idea, collaboration, or just want to say hi? I'd love
+          to hear from you!
+        </p>
+        <div class="contact-info">
+          <p><strong>Email:</strong> devxsameer@gmail.com</p>
+          <p><strong>Based in </strong>Moradabad, UP, India</p>
+          <div class="social-links">
+            <a href="https://x.com/devxsameer" target="_blank">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://github.com/devxsameer" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/devxsameer/" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <p class="contact-tagline section-para">
+          I'm always open to discussing new ideas, creative projects, or
+          opportunities to collaborate.
+        </p>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
