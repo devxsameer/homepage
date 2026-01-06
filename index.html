@@ -24,7 +24,7 @@
         transition: opacity 1s ease;
         width: 45px;
         aspect-ratio: 0.75;
-        --c: no-repeat linear-gradient(#121212 0 0);
+        --c: no-repeat linear-gradient(#ff4757 0 0);
         background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
         background-size: 20% 50%;
         animation: l6 1s infinite linear;
@@ -53,7 +53,7 @@
         left: -25%;
         width: 200px;
         height: 200px;
-        background: #ff4757;
+        background: #121212;
         border-radius: 50%;
         transform: scale(30); /* expand ripple to cover screen */
         transition: transform 1s ease-out;
@@ -74,7 +74,7 @@
       <div class="loader"></div>
     </div>
     <header class="header">
-      <h1 class="logo">dev<span>X</span>sameer</h1>
+      <h1 class="logo">devxsameer<span>.</span></h1>
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -91,19 +91,26 @@
     <main class="hero" id="hero">
       <div class="hero-content">
         <h2 class="hero-heading">Hi, I'm <span>Sameer Ali</span></h2>
-        <span class="hero-sub-heading">Full Stack Developer</span>
+        <span class="hero-sub-heading"
+          >Backend-Focused Full-Stack Developer</span
+        >
+
         <p class="hero-para">
-          Passionate about building responsive, user-friendly websites and web
-          applications. I turn ideas into clean, functional designs while
-          exploring modern web technologies.
+          I build production-grade web applications with proper authentication,
+          authorization, and clean architecture.
+          <span class="block">
+            My focus is on designing scalable backends, predictable frontend
+            data flows, and real-world systems — not just demos.
+          </span>
         </p>
-        <a href="#contact">
-          <button class="btn" type="button">Contact Me</button>
+
+        <a href="#projects">
+          <button class="btn" type="button">View Projects</button>
         </a>
       </div>
       <picture class="hero-picture">
         <img
-          width="400px"
+          width="300px"
           src="./assets/hero.jpeg"
           alt="anime character"
           srcset=""
@@ -113,11 +120,14 @@
     <section class="projects" id="projects">
       <div class="section-content">
         <h2 class="section-heading"><span>P</span>rojects</h2>
+
         <p class="section-para">
-          Here's a showcase of the projects I've built while learning and
-          exploring web development. Each one reflects my journey of turning
-          ideas into interactive, responsive, and visually engaging web
-          experiences — from simple components to complete websites.
+          These projects represent my transition from learning fundamentals to
+          building real, production-style applications.
+          <span class="block">
+            Each one focuses on clean architecture, authentication,
+            authorization, and real-world data handling.
+          </span>
         </p>
         <div class="cards-wrapper">
           <div class="card">
@@ -128,12 +138,22 @@
               />
             </picture>
             <div class="card-content">
-              <h3>battleship.</h3>
+              <h3>Blog Platform</h3>
+
               <p>
-                About Classic Battleship game built with JavaScript, Webpack,
-                and TDD. Features human vs AI gameplay, ship placement preview,
-                hit/miss tracking, and full Jest test coverage.
+                A production-style blog platform built as a pnpm monorepo.
+                Includes a public blog, role-based admin dashboard, and a shared
+                typed API client.
+                <span>
+                  Features refresh-token authentication, role-based access
+                  control, analytics dashboards, cursor-based pagination, and
+                  Markdown publishing.
+                </span>
               </p>
+              <span
+                >React 19 · TypeScript · Express · PostgreSQL · Drizzle ORM ·
+                JWT Auth</span
+              >
               <div class="btns">
                 <a
                   href="https://github.com/devxsameer/battleship"
@@ -160,11 +180,20 @@
               />
             </picture>
             <div class="card-content">
-              <h3>zephyr</h3>
+              <h3>Blog API</h3>
+
               <p>
-                Zephyr - A modern, minimalistic weather app delivering real-time
-                forecasts with clean UI and reliable APIs.
+                A modular REST API built with Express and TypeScript, designed
+                to serve a real production frontend.
+                <br /><br />
+                Implements secure refresh-token authentication with rotation,
+                token revocation, policy-based authorization, transactional
+                safety, and OpenAPI documentation.
               </p>
+              <span
+                >Node.js · Express · TypeScript · PostgreSQL · Zod ·
+                Swagger</span
+              >
               <div class="btns">
                 <a
                   href="https://github.com/devxsameer/zephyr"
@@ -191,13 +220,19 @@
               />
             </picture>
             <div class="card-content">
-              <h3>crisptasks</h3>
+              <h3>InnerCircles</h3>
+
               <p>
-                CrispTasks — A modern to-do app from The Odin Project. Built
-                with ES6 modules, Webpack, and npm scripts. Create projects, add
-                tasks with due dates and priorities, and persist data locally
-                with a clean, DOM-driven UI.
+                A private community platform focused on controlled visibility
+                and role-based permissions.
+                <br /><br />
+                Users can create private circles, post anonymously within
+                groups, and manage members with strict authorization rules.
               </p>
+              <span
+                >Express · PostgreSQL · Role-Based Access Control · Session
+                Auth</span
+              >
               <div class="btns">
                 <a
                   href="https://github.com/devxsameer/crisptasks"
@@ -224,12 +259,19 @@
               />
             </picture>
             <div class="card-content">
-              <h3>libraryX</h3>
+              <h3>Arcadia</h3>
+
               <p>
-                A stylish, minimal JavaScript book library app that lets you
-                track your reading list — complete with light & dark mode,
-                localStorage support, and a sleek UI.
+                A modern video-game discovery platform built with React and
+                production-style frontend architecture.
+                <br /><br />
+                Focuses on feature-based organization, scalable routing, API
+                abstraction, and real-world data handling patterns.
               </p>
+              <span
+                >React · TypeScript · Vite · API-Driven UI · Clean
+                Architecture</span
+              >
               <div class="btns">
                 <a
                   href="https://github.com/devxsameer/libraryx"
@@ -251,12 +293,19 @@
         </div>
       </div>
     </section>
+    <p class="section-para">
+      I enjoy working on problems related to authentication flows, backend
+      architecture, and frontend systems that scale cleanly.
+      <br /><br />
+      I prefer building things the “real” way — even if it means extra
+      complexity — to better understand production tradeoffs.
+    </p>
     <section class="contact" id="contact">
       <div class="section-content">
         <h2 class="section-heading">Contact <span>M</span>e</h2>
         <p class="section-para">
-          Have a project idea, collaboration, or just want to say hi? I'd love
-          to hear from you!
+          Interested in working together or discussing backend-heavy full-stack
+          roles? Feel free to reach out.
         </p>
         <div class="contact-info">
           <p><strong>Email:</strong> devxsameer@gmail.com</p>
